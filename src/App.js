@@ -1,9 +1,12 @@
 import './App.css';
+import Navigation from './components/Navigation/Navigation';
+import Home from './components/Home/Home'
 
 function App() {
   return (
     <div className="App">
-      <h1>This is the personal portfolio for zaph</h1>
+      <Navigation />
+      <Home />
     </div>
   );
 }
