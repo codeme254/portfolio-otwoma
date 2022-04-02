@@ -10,7 +10,7 @@ import {
   NodeIcon,
   PythonIcon,
   JavaIcon,
-  Code
+  Code,
 } from "./../icons/Icons";
 
 const About = () => {
@@ -145,7 +145,8 @@ const About = () => {
                 <JavaIcon /> <span className="skill-box__skill-name">Java</span>
               </div>
               <div className="skill-box">
-                <Code /> <span className="skill-box__skill-name">Algorithms</span>
+                <Code />{" "}
+                <span className="skill-box__skill-name">Algorithms</span>
               </div>
             </div>
           </div>
