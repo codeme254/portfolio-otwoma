@@ -11,6 +11,8 @@ import {
   PythonIcon,
   JavaIcon,
   Code,
+  Github,
+  Git
 } from "./../icons/Icons";
 
 const About = () => {
@@ -147,6 +149,14 @@ const About = () => {
               <div className="skill-box">
                 <Code />{" "}
                 <span className="skill-box__skill-name">Algorithms</span>
+              </div>
+              <div className="skill-box">
+                <Github />{" "}
+                <span className="skill-box__skill-name">GitHub</span>
+              </div>
+              <div className="skill-box">
+                <Git />{" "}
+                <span className="skill-box__skill-name">Git</span>
               </div>
             </div>
           </div>
