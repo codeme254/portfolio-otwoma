@@ -6,6 +6,7 @@ import {
   Github,
   Facebook,
   Twitter,
+  LinkedIn
 } from "../icons/Icons";
 
 const Home = () => {
@@ -49,7 +50,7 @@ const Home = () => {
               <span className="social-link__text">Twitter</span>
             </a>
             <a href="/" className="social-link">
-              <Twitter />
+              <LinkedIn />
               <span className="social-link__text">LinkedIn</span>
             </a>
           </div>

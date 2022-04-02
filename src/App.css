@@ -31,6 +31,33 @@ body {
   /* overflow-x: hidden; */
 }
 
+
+/* TODO: common styles */
+.heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60vw;
+  margin: 2rem auto;
+}
+
+.heading__title{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--color-primary-dark);
+  margin-bottom: 5px;
+}
+
+.heading__subtitle{
+  font-size: 4rem;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+/* TODO: End ofcommon styles */
+
 /* The navigation */
 .header {
   display: flex;
@@ -521,3 +548,11 @@ body {
   }
 }
 /*  TODO: End of the about section */
+
+
+/* TODO: Services */
+.services{
+  padding: 2rem;
+  margin: 3rem 0;
+}
+/* TODO: End of Services section */
