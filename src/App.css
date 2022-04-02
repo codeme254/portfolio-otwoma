@@ -554,5 +554,90 @@ body {
 .services{
   padding: 2rem;
   margin: 3rem 0;
+  background-color: #f7f1f9;
+}
+
+.services__container{
+  width: 80vw;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
+}
+
+.service{
+  width: 30rem;
+  background-color: var(--color-white);
+  padding: 20px;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.service:hover{
+  transform:  translateY(-4px);
+}
+
+.service__image{
+  width: 10rem;
+  height: 10rem;
+  padding: 20px;
+  background-color: var(--color-primary);
+  margin-bottom: 4rem;
+  position: relative;
+  border-radius: 1px;
+}
+
+.service__image::after{
+  content: "";
+  width: 1rem;
+  height: 0.8rem;
+  background-color: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+  background-color: inherit;
+}
+
+.service__image--img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  fill: white;
+}
+
+.service__title{
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  color: var(--color-primary-dark);
+}
+
+.service__description{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #888;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+.service__learrn-more-btn, .service__learrn-more-btn:visited{
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.service__learrn-more-btn svg{
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  fill: var(--color-primary);
+  margin-left: 3px;
 }
 /* TODO: End of Services section */
