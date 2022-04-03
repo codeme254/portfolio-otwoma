@@ -31,9 +31,16 @@ body {
   /* overflow-x: hidden; */
 }
 
+/* TODO: utility classes */
+.fix-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* TODO: end of utility classes */
 
 /* TODO: common styles */
-.heading{
+.heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +49,7 @@ body {
   margin: 2rem auto;
 }
 
-.heading__title{
+.heading__title {
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -50,7 +57,7 @@ body {
   margin-bottom: 5px;
 }
 
-.heading__subtitle{
+.heading__subtitle {
   font-size: 4rem;
   text-align: center;
   text-transform: capitalize;
@@ -192,6 +199,7 @@ body {
   padding: 2rem;
   padding-left: 10rem;
   background-color: #0d86f893;
+  position: relative;
 }
 
 /* .home__text{
@@ -343,7 +351,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.home__image--img:hover {
+.home__image:hover .home__image--img {
   transform: translate(-5rem, -7rem) scale(1.1) rotateY(180deg);
 }
 
@@ -362,6 +370,144 @@ body {
   }
 }
 /* End of The home section */
+
+/* TODO: pop up */
+.u-hide-me-sum {
+  display: none !important;
+}
+.me-sum {
+  min-height: 60vh;
+  min-width: 60vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: var(--color-white);
+  align-items: center;
+  padding: 1rem;
+}
+
+.close__button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: var(--color-primary);
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close__button svg {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  fill: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.me-sum__image {
+  background-color: #f2f2f2;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.me-sum__image--img {
+  transform: translateY(-5%);
+}
+
+.me-sum__text {
+  padding: 5rem;
+}
+
+.me-sum__text--subheading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.me-sum__text--heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.me-sum__text--occup {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #333;
+  transform: scaleY(1.02);
+  margin-bottom: 1rem;
+}
+
+.me-sum__text--txt {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: justify;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.me-sum__detail {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.me-sum__detail svg {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 1rem;
+  fill: var(--color-primary);
+}
+
+.me-sum__link svg {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  fill: #f7f1f9;
+}
+
+.me-sum__social {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.me-sum__social > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.me-sum__link,
+.me-sum__link:visited {
+  padding: 1rem;
+  background-color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+/* TODO: End of pop up */
 
 /* TODO: The about section */
 .about {
@@ -549,15 +695,14 @@ body {
 }
 /*  TODO: End of the about section */
 
-
 /* TODO: Services */
-.services{
+.services {
   padding: 2rem;
   margin: 3rem 0;
   background-color: #f7f1f9;
 }
 
-.services__container{
+.services__container {
   width: 80vw;
   margin: 2rem auto;
   display: grid;
@@ -566,19 +711,19 @@ body {
   /* grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
 }
 
-.service{
+.service {
   width: 30rem;
   background-color: var(--color-white);
   padding: 20px;
   position: relative;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-.service:hover{
-  transform:  translateY(-4px);
+.service:hover {
+  transform: translateY(-4px);
 }
 
-.service__image{
+.service__image {
   width: 10rem;
   height: 10rem;
   padding: 20px;
@@ -588,7 +733,7 @@ body {
   border-radius: 1px;
 }
 
-.service__image::after{
+.service__image::after {
   content: "";
   width: 1rem;
   height: 0.8rem;
@@ -601,7 +746,7 @@ body {
   background-color: inherit;
 }
 
-.service__image--img{
+.service__image--img {
   width: 100%;
   height: 100%;
   display: block;
@@ -609,14 +754,14 @@ body {
   fill: white;
 }
 
-.service__title{
+.service__title {
   font-size: 2.5rem;
   text-transform: capitalize;
   margin-bottom: 2rem;
   color: var(--color-primary-dark);
 }
 
-.service__description{
+.service__description {
   font-size: 1.6rem;
   font-weight: 600;
   color: #888;
@@ -625,7 +770,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.service__learrn-more-btn, .service__learrn-more-btn:visited{
+.service__learrn-more-btn,
+.service__learrn-more-btn:visited {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
@@ -633,7 +779,7 @@ body {
   color: var(--color-primary);
 }
 
-.service__learrn-more-btn svg{
+.service__learrn-more-btn svg {
   --size: 2rem;
   width: var(--size);
   height: var(--size);
@@ -641,3 +787,266 @@ body {
   margin-left: 3px;
 }
 /* TODO: End of Services section */
+
+/* TODO: Projects section */
+.projects {
+  margin: 6rem 0 4rem 0;
+  padding: 2rem 8rem;
+  /* background-color: #f7f1f9; */
+}
+
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+
+.project-container {
+  width: 30rem;
+  background-color: #f7f1f9;
+  padding: 0.2rem;
+  border-radius: 3px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project:hover .project__image--img {
+  transform: scale(0.95);
+}
+
+.project__status {
+  position: absolute;
+  text-align: center;
+  top: 3rem;
+  right: -1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: orange;
+  padding: 1rem 1.5rem;
+  transform: rotateZ(35deg);
+}
+
+.project__status::after {
+  content: "";
+  position: absolute;
+  left: -5.5rem;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: inherit;
+}
+
+.project__status::before {
+  content: "";
+  position: absolute;
+  right: -5.5rem;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: inherit;
+}
+
+.projects__image {
+  width: 100%;
+  height: 20rem;
+  margin-bottom: 1rem;
+}
+
+.project__image--img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.project__name {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin: 2rem auto;
+  margin-bottom: 3rem;
+  position: relative;
+  width: max-content;
+}
+
+.project__name::after {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 50%;
+  width: 40%;
+  height: 3px;
+  background-color: var(--color-primary);
+  transform: translateX(-50%);
+}
+
+.project__category {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+}
+
+.project__category span {
+  color: crimson;
+}
+
+.projects__links {
+  display: flex;
+  align-items: center;
+}
+
+.projects__links > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.project__links--link,
+.project__links--link:visited {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.project__links--link:hover {
+  background-color: var(--color-primary);
+}
+
+.project__links--link svg {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 0.8rem;
+  fill: var(--color-white);
+}
+/* TODO: End of Projects section */
+
+/* TODO: Footer */
+.footer {
+  padding: 6rem 3rem;
+  padding-bottom: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  background-color: #f7f1f9;
+  position: relative;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 3rem;
+}
+
+.footer__me--title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--color-black-real);
+  margin-bottom: 2rem;
+}
+
+.footer__me--text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+  text-align: justify;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.social__links {
+  display: flex;
+  align-items: center;
+}
+
+.social__links > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.social__link,
+.social__link:visited {
+  --size: 5rem;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.social__link svg {
+  --size: 2.5rem;
+  width: var(--size);
+  height: var(--size);
+  fill: var(--color-white);
+}
+
+.footer__subtitle {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 4rem;
+}
+
+.footer__services {
+  padding-left: 7rem;
+}
+.expertise {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #555;
+}
+
+.expertise svg {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 1rem;
+  fill: var(--color-primary);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+.contact svg {
+  --size: 1.5rem;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 1rem;
+  fill: var(--color-primary);
+}
+
+.footer__copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white-dark);
+  width: 100%;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+/* TODO: End Of Footer */
