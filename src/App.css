@@ -1080,3 +1080,106 @@ body {
   font-size: 1.8rem;
 }
 /* TODO: end of jokes section */
+
+
+/* TODO: contact section */
+.contact-section{
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.form__wraper{
+  width: 80vw;
+  margin: 1rem auto;
+}
+
+.details__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  /* width: 80%;
+  margin: auto; */
+}
+
+.detail{
+  margin-bottom: 1.8rem;
+}
+
+.detail__heading{
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+  color: var(--color-black-dark);
+}
+
+.detail__detail-s{
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.form__group{
+  margin-bottom: 2rem;
+}
+
+.form__flex{
+  display: flex;
+  align-items: center;
+}
+
+.form__flex>*:not(:last-child){
+  margin-right: auto;
+}
+
+.form__flex>*{
+  width: 49%;
+}
+
+.form__group--input{
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  border: 2px solid #ddd;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.form__group--input::-webkit-input-placeholder{
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.form__textarea{
+  resize: vertical;
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  border: 2px solid #ddd;
+  font-size: 1.5rem;
+  width: 100%;
+  font-family: inherit;
+  color: var(--color-black-dark);
+  font-weight: 500;
+  min-height: 40px;
+}
+
+.form__legend{
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form__button{
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* TODO: end of contact section */
