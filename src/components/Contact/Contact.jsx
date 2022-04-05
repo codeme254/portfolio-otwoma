@@ -17,7 +17,7 @@ const Contact = () => {
                     </div>
                     <div className="detail">
                         <h6 className="detail__heading">My phone number</h6>
-                        <p className="detail__detail-s">+254718762377</p>
+                        <p className="detail__detail-s">+254718762377 (preffered)</p>
                     </div>
                 </div>
                 <form action="/" className="form">

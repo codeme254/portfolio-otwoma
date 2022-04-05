@@ -899,6 +899,7 @@ body {
 
 .project__category span {
   color: crimson;
+  font-weight: bold;
 }
 
 .projects__links {
@@ -1060,6 +1061,11 @@ body {
   margin: 3rem 0;
 }
 
+.jokes__container{
+  width: 80vw;
+  margin: 1rem auto;
+}
+
 .joke{
   padding: 1rem;
   width: 40rem;
@@ -1078,6 +1084,7 @@ body {
 
 .joke__joke-sub{
   font-size: 1.8rem;
+  font-weight: bold;
 }
 /* TODO: end of jokes section */
 
